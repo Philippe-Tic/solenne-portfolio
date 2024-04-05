@@ -33,7 +33,7 @@ export default function Home() {
   )
 
   return (
-    <Box
+    <Flex
       as={motion.div}
       cursor='pointer'
       onClick={() => {
@@ -42,10 +42,22 @@ export default function Home() {
           setDisplayImage(false)
         }, 1000);
       }}
-      backgroundImage={`url('https://source.unsplash.com/random')`}
-      w='100vw'
+      maxW='100vw'
       h='100vh'
       animation={anim ? animation : undefined}
-    />
+      alignItems='center'
+      justifyContent='center'
+      background="#DEF0F7"
+      p='4'
+    >
+      <Box
+        backgroundImage="url('/bg-index.png')"
+        backgroundRepeat="no-repeat"
+        aspectRatio="1657.12/936.7"
+        backgroundSize="contain"
+        maxW="full"
+        h="full"
+      />
+    </Flex>
   )
 };
