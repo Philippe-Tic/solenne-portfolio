@@ -1,6 +1,5 @@
 "use client"
 
-import { brasika } from '@/src/app/layout';
 import { CommunicationSection } from '@/src/components/CommunicationSection';
 import { GraphismeSection } from '@/src/components/GraphismeSection';
 import { IllustrationSection } from '@/src/components/IllustrationSection';
@@ -63,7 +62,7 @@ export const Homepage: React.FC = () => {
         pl='55%'
       >
         <VStack alignItems='flex-start'>
-          <Text color='#DF582B' fontSize={{base: 'xl', sm: '2xl', md: '3xl', lg: '5xl'}} {...brasika}>
+          <Text color='#DF582B' fontSize={{base: 'xl', sm: '2xl', md: '3xl', lg: '5xl'}} fontFamily="'__brasika_43c43d', '__brasika_Fallback_43c43d'">
           HELLO
           </Text>
           <Text fontSize={{base: 'sm', sm: 'md', md: 'lg',lg: 'xl'}}>

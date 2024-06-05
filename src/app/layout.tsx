@@ -4,8 +4,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Inter } from "next/font/google";
 import localFont from 'next/font/local';
 
-export const inter = Inter({ subsets: ["latin"] });
-export const brasika = localFont({ src: './brasika-display-trial-webfont.woff2' })
+const inter = Inter({ subsets: ["latin"] });
+const brasika = localFont({ src: './brasika-display-trial-webfont.woff2' })
 
 export default function RootLayout({
   children,
@@ -14,6 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <style jsx global>{`
+        html {
+          font-family: ${brasika.style.fontFamily};
+        }
+        `}</style>
+      </head>
       <body className={inter.className}>
         <ChakraProvider>
           {children}
