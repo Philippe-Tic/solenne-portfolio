@@ -79,12 +79,12 @@ export const GraphismeSection = () => {
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien fermentum.'
       },
       {
-        url: '/graphisme/img-15.jpg',
+        url: '/graphisme/img-15.png',
         title: 'Graphisme',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien fermentum.'
       },
       {
-        url: '/graphisme/img-16.png',
+        url: '/graphisme/img-16.jpg',
         title: 'Graphisme',
         content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien fermentum.'
       },
@@ -127,7 +127,8 @@ export const GraphismeSection = () => {
   ]
 
   return (
-    <SimpleGrid bgColor='gray.50' columns={{base: 1, md: 2, lg: 3}} spacing='8' py='8' px='8'>
+    <SimpleGrid bgColor='gray.50' columns={{ base: 1, md: 2, lg: 3 }}
+      spacing='8' py='8' px='8'>
       <VStack spacing='8'>
         {images[0].map((image, index) => (
           <ChakraImage key={index} alt='' src={image.url} />
