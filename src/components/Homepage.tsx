@@ -1,10 +1,8 @@
 "use client"
 
-import { CommunicationSection } from '@/src/components/CommunicationSection';
-import { GraphismeSection } from '@/src/components/GraphismeSection';
-import { IllustrationSection } from '@/src/components/IllustrationSection';
-import { MediaSection } from '@/src/components/MediaSection';
+import { ImageSection } from '@/src/components/ImageSection';
 import { MotionSection } from '@/src/components/MotionSection';
+import { communicationImages, graphismeImages, illustrationImages, mediaImages } from '@/src/data/images';
 import { Box, Button, Flex, HStack, Icon, IconButton, Menu, MenuButton, MenuItem, MenuList, Portal, Spacer, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -38,10 +36,10 @@ export const Homepage: React.FC = () => {
   }
 
   const contentSection: {[key in Section]: JSX.Element} = {
-    'graphisme': <GraphismeSection />,
-    'communication': <CommunicationSection />,
-    'illustration': <IllustrationSection />,
-    'media': <MediaSection />,
+    'graphisme': <ImageSection images={graphismeImages} />,
+    'communication': <ImageSection images={communicationImages} />,
+    'illustration': <ImageSection images={illustrationImages} />,
+    'media': <ImageSection images={mediaImages} />,
     'motion': <MotionSection />,
   }
 
@@ -73,7 +71,7 @@ export const Homepage: React.FC = () => {
           </Text>
         </VStack>
       </Box>
-      <Flex position='sticky' justifyContent='center' alignItems='center' top='0' w='full' h='16' background={colors[currentMenu]} px='4'>
+      <Flex zIndex='overlay' position='sticky' justifyContent='center' alignItems='center' top='0' w='full' h='16' background={colors[currentMenu]} px='4'>
         {
           isSmall ? (
             <Menu>
